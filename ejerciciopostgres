@@ -1,0 +1,92 @@
+create table persona (
+idpersona int not null
+nombre varchar (20),
+cedula varchar (10)
+) 
+
+
+insert into persona values('3', 'Maria', '983819283')
+insert into persona (idpersona, nombre) values ('3', 'Carla')
+
+select * from persona 
+
+
+update persona set idpersona = '2'
+where cedula is null
+
+update persona set cedula = '143256888'
+where cedula is null 
+
+update persona set cedula ='12345689', nombre ='Pedro'
+where cedula = '143256888'
+
+Select (nombre, cedula) from persona
+
+Select * from persona
+Select (nombre, cedula) as datos from persona
+
+
+Select (nombre) as Nombre cedula from persona 
+
+Select (nombre) as Nombre, cedula from persona 
+
+Select nombre from persona 
+where idpersona ='2'
+
+Select * from persona
+where idpersona > 1 and nombre ='Pedro'
+
+delete from persona 
+Where nombre ='Pedro'
+
+Alter table persona 
+ADD Column Test varchar (20)
+
+Alter Table persona 
+Rename Column Test to Test2
+
+Alter Table persona 
+Drop Column test2 
+
+Select * from persona 
+
+Update persona set Test ='TYM'
+
+Alter table persona 
+Add column Test varcgar(29)
+
+Alter table persona
+Alter colum Test set not null 
+
+Alter table persona
+Alter Column Test drop not null 
+
+Alter table persona
+Alter column Test Type varchar (50)  
+
+select *  from persona 
+
+create table persona(
+idpersona int not null, 
+nombre varchar(20),
+cedula varchar(10),
+primary key(idpersona)
+)
+
+Alter table persona
+Add primary key (idpersona)
+
+insert into persona values('5','Jorge','1234512323','TYM')
+
+Create table Test (
+idtest serial primary key not null, 
+nombre varchar (20), 
+telefono varchar (10)
+)
+
+Select * from test 
+
+insert into Test (nombre, telefono) values ('Eduardo', '98872837')
+insert into Test (nombre, telefono) values ('Jose', '78927482')
+insert into Test (nombre, telefono) values ('Maria', '389274927')
+
